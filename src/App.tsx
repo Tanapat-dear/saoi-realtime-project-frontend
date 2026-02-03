@@ -14,6 +14,7 @@ import EditOutputPlan from './Pages/EditOutputPlan';
 import { planEditorAction } from './action/action';
 import LoginPage from './Pages/LoginPage';
 import SettingsPage from './Pages/SettingsPage';
+import NotFound from './Pages/NotFound';
 const queryClient = new QueryClient()
 
 let router = createBrowserRouter([
@@ -56,6 +57,10 @@ let router = createBrowserRouter([
         loader: planeditor_loader,
         action: planEditorAction
       },
+      {
+        path:'*',
+        element: <NotFound />
+      }
       
     ]
   },
